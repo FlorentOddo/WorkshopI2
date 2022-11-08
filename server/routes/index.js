@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const mysql = require('mysql');
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log("hehe on fait du js noraj");
   res.render('index', { title: 'Express' });
 });
 
