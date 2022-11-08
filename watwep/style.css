@@ -1,0 +1,83 @@
+/* placer search bar dans une grille grid */
+
+  
+  /* centrer la search bar sur la page entière, ajouter un border à la class="form-group" */
+  .form-group{
+    justify-self: center;
+    align-self: center;
+    border: 3px solid black;
+    width: 70vw;
+    border-radius: 26px;
+    padding: 5px 15px;
+  }
+  
+  /* appliquer une width et une height à l'input */
+  .form-control{
+    width: 80%;
+    height: 40px;
+    border : none;
+  }
+  
+  /* placer une icone search à droite de l'input  */
+  button{
+    float: right;
+    width: 34px;
+    height: 36px;
+    margin-top: -40px;
+    margin-right: -5px;
+    border: none;
+    background: #fff;
+  }
+  
+  /* solution temporaire pour supprimer la surbrillance bleue lorsque l'input est sélectionné */
+  input[type="text"]{
+  outline: none;
+  box-shadow: none !important;
+  }
+
+
+  
+  .card{
+    margin:20px;
+    border:0;
+    box-shadow:2px 2px 5px #666;
+    padding:20px;
+  }  
+  
+  .card-group{
+    width: 80vw;
+    margin: auto;
+    }
+  
+  .product-price {
+      font-size: 26px;
+      font-family: Verdana;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1;
+      color: #E25739;
+       margin-bottom: 15px;
+  }
+  
+  .product-price:last-child {
+      margin-bottom: 0px;
+  }
+  
+  .product-price-btn {
+      font-size: 20px;
+      font-weight: bold;
+         line-height: 1.8;
+      color: #FFFFFF;
+      background: #4299F0;
+      text-align: center;
+       margin:0;  
+      
+    }
+  
+  
+  .card ul {
+   padding-left: 20px;
+      font-size: 16px;
+  }
+  
+  
