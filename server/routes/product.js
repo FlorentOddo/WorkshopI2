@@ -23,4 +23,16 @@ router.get(`/:id`, function(req, res, next) {
   res.send('respond product ' + id);
 });
 
+router.post(`/name`, function(req, res, next) {
+  var name = req.body.name;
+  connection.query(`SELECT * FROM product WHERE name LIKE "%${name}%"`, (err, result) => {
+    if (err) throw err;
+    console.log(result);
+  })
+
+  console.log("test");
+  console.log(name);
+  res.send('respond product ' + name);
+});
+
 module.exports = router;
