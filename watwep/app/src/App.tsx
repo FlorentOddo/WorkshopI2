@@ -6,14 +6,16 @@ import {Product} from './product/product'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          <Route index element={<SearchBar />} />
-          <Route path="product/:id" element={<Product />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+      <SearchBar />
+        <Routes>
+          <Route path="/">
+            <Route path="product/:id" element={<Product />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

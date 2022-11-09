@@ -28,7 +28,8 @@ export const SearchBar = () => {
     setSelectedProd(product);
   }, [products]);
 
-  const handleSubmit = useCallback(() => {
+  const handleSubmit = useCallback((event: any) => {
+    event?.preventDefault();
     if(selectedProd){
       navigate('product/' + selectedProd.idproduct, {state: selectedProd})
     }
@@ -36,11 +37,6 @@ export const SearchBar = () => {
   
   return (
     <>
-      <div className="jumbotron text-center">
-        <h1>My First Bootstrap Page</h1>
-        <p>Resize this responsive page to see the effect!</p>
-      </div>
-      
       <div className="container">
         <div className="row">
           <form action="submit" onSubmit={handleSubmit}>
@@ -61,57 +57,6 @@ export const SearchBar = () => {
           </form>
         </div>
       </div>
-
-      <div className="card-group">
-        <div className="card product1">
-          <img className="card-img-top" src="https://fakeimg.pl/300x300/" alt="Card cap" />
-          <div className="card-body d-flex flex-column">
-            <h3 className="card-title">Modular Wireless Sensor Node</h3>
-            <p>WISE-4000 Series</p>
-           <ul>
-            <li>Support Wi-Fi, 3G, NB-IoT, LoRa wireless communication
-             </li>
-            <li>Powered by battery or solar rechargeable battery</li>
-             <li>Built-in sensor and RS-485 port</li>
-             </ul>
-          <div className="buy mt-auto">
-          <p className="product-price">From €360.10</p>
-           <p className="product-price-btn">Buy Online </p>
-            </div>
-          </div>
-        </div>
-        <div className="card product2">
-          <img className="card-img-top" src="https://fakeimg.pl/300x300/" alt="Card cap" />
-          <div className="card-body d-flex flex-column">
-            <h3 className="product-name">Compact Intelligent Gateway </h3>
-            <p className="product-desc">ADAM-6700 </p>
-           <ul>
-            <li>Data acquisition and analytics
-            </li>
-            <li>Encrypted Cloud /database access
-            </li>
-            <li>Built in Node-Red: Graphical programmable environment</li>
-       </ul>
-          <div className="buy mt-auto">
-          <p className="product-price">From €360.10</p>
-           <p className="product-price-btn">Buy Online </p>
-            </div>
-          </div>
-        </div>
-        <div className="card product3">
-          <img className="card-img-top" src="https://fakeimg.pl/300x300/" alt="Card cap" />
-          <div className="card-body d-flex flex-column">
-            <h3 className="product-name">All-in-One Terminal for Data Pre-treatment</h3>
-      <p className="product-desc">ADAM-3600</p>
-          <ul>
-              <li>20 x I/O channels and 4 x expansion slots for integrating different sensors</li>
-              <li>Edge intelligence software with checklist function for system configuration without</li>
-              <li>Supports various field devices and controller protocols</li>
-          </ul>
-       
-          </div>
-        </div>
-      </div>  
     </>
   );
 }
