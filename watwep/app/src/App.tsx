@@ -1,10 +1,10 @@
-import './App.css';
 import React from 'react'
-// import {SearchBar} from './searchbar/searchbar'
+import './App.css';
+import {SearchBar} from './searchbar/searchbar'
 
 function App() {
-  return (<></>
-    // <SearchBar></SearchBar>
+  return (
+    <SearchBar></SearchBar>
   );
 }
 
