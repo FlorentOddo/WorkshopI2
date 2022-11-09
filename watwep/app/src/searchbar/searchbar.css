@@ -19,7 +19,7 @@
   }
   
   /* placer une icone search à droite de l'input  */
-  button{
+  .searchButton{
     float: right;
     width: 34px;
     height: 36px;
