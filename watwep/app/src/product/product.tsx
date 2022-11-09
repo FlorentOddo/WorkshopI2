@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { addToBasket } from '../api/api';
 import './style.scss'
 
@@ -7,8 +8,17 @@ type ProductProps = {
 }
 
 export const Product = () => {
+  const [product, setProduct] = useState();
+  const location = useLocation();
+
+  useEffect(() => {
+    setProduct(location.state); 
+    console.log(location.state);
+  }, [location.state])
+  
+
   const handleAddToCart = useCallback(() => {
-    // console.log(props.name);
+    // console.log(product.value);
     // addToBasket(e.target.value);
   },[]);
   
