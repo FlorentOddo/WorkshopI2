@@ -247,7 +247,7 @@ footer {
   }
 }
 
-@media (min-width: $md) {
+@media (min-width) {
   .product-image img, .image-list img {
     width: 100%;
   }
