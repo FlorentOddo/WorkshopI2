@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './searchbar.css'
 
 export const SearchBar = () => {
+
+  const handleInput = useCallback((e: any) => {
+    const lastUpdate = Date.now();
+
+    setTimeout(() => {
+      const diff = Date.now() - lastUpdate;
+
+      if (diff > 500) {
+        console.log("Search!");
+      }
+    }, 500);
+  }, []);
+  
   return (
     <>
       <div className="jumbotron text-center">
@@ -13,7 +26,7 @@ export const SearchBar = () => {
         <div className="row">
             <form>
                 <div className="form-group">
-                  <input type="text" className="form-control" placeholder="Pate à tartiner nutella..." />
+                  <input type="text" className="form-control" placeholder="Pate à tartiner nutella..." onInput={handleInput}/>
                   <button>
                     <svg className="bi bi-search" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
