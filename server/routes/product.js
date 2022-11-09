@@ -6,33 +6,23 @@ const connection = mysql.createConnection(database_connection)
 
 connection.connect((err) => {
   if (err) throw err
-  console.log('You are now connected...')
+  console.log('You are now connected to the dabase')
 })
-
-//const connection = mysql.createConnection(database_config);
 
 router.get(`/:id`, function(req, res, next) {
   var id = req.params.id;
   connection.query(`SELECT * FROM product WHERE idproduct = ${id}`, (err, result) => {
     if (err) throw err;
-    console.log(result);
+    res.send(result);
   })
-
-  console.log("test");
-  console.log(id);
-  res.send('respond product ' + id);
 });
 
 router.post(`/name`, function(req, res, next) {
   var name = req.body.name;
-  connection.query(`SELECT * FROM product WHERE name LIKE "%${name}%"`, (err, result) => {
+  connection.query(`SELECT * FROM product WHERE UPPER(name) LIKE UPPER("%${name}%")`, (err, result) => {
     if (err) throw err;
-    console.log(result);
+    res.send(result);
   })
-
-  console.log("test");
-  console.log(name);
-  res.send('respond product ' + name);
 });
 
 module.exports = router;
