@@ -45,22 +45,26 @@ export const Product = () => {
                   </div>
                 </div>
                 <p className="product-description">{product?.description}</p>
-                <h4 className="price">Prix : <span>$180</span></h4>
-                <p className="vote"><strong>9{product?.idproduct}%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+                <h4 className="price">Prix : <span>{product?.idproduct ? 1.80 * +product.idproduct : 1.80}€</span></h4>
+                <p className="vote"><strong>9{product?.idproduct}%</strong> of buyers enjoyed this product! <strong>({product?.idproduct ? +product?.idproduct * 87 : 87} votes)</strong></p>
 
-                <h5 className="colors">ScoreEco:
-                  <span className="color green ">X</span>
+                <h5 className="colors">Score-Eco: {product?.ecoscore}
+                </h5>
+                <div>
+
+                  <span className="color green "></span>
                   <span className="color yellow " ></span>
                   <span className="color orange"></span>
-                  <span className="color red"></span>
-                </h5>
+                  <span className="color red">X</span>
+                </div>
 
                 <div id="flag.ecoscore.disabled" className="product-badge-anchor"><div className="product-badge-anchor__wrapper"><div className="product-badge-anchor__content"><div className="product-badge-anchor-heading">
-                  <h3 className="title">Eco-Score </h3>
+                  {/* <h3 className="title">Score-Eco </h3> */}
+                  <br />
                 </div>
                   <div className="product-badge-anchor-content">
                     <div className="rich-text">
-                      <p>L'Eco-score vous indique l’impact sur l'environnement des produits alimentaires. Il a été élaboré pour favoriser une alimentation plus durable.<br /><br />
+                      <p>Le Score-Eco vous indique l’impact sur l'environnement des produits alimentaires. Il a été élaboré pour favoriser une alimentation plus durable.<br /><br />
                         La méthode de calcul estime l’impact de chaque étape de la vie d’un produit (production, transport, vente en magasin, cuisine, recyclage des emballages) sur la pollution de l'environnement.
                       </p>
                     </div>
@@ -75,12 +79,12 @@ export const Product = () => {
                             <li>l’impact sur les espèces menacées</li>
                           </ul>
                           <p>
-                            Cet Eco-score est en gris: en raison du manque d’informations nécessaires, il est impossible de calculer l’Eco-score de ce produit.
+                            Ce Score-Eco est en gris: en raison du manque d’informations nécessaires, il est impossible de calculer le Score-Eco de ce produit.
                           </p>
                         </div>
                       </div>
                     </div>
-                    <p className="paragraph product-badge-anchor__links"><a href="/engagements/eco-score" target="_blank" className="ds-link ds-link--small ">
+                    <p className="paragraph product-badge-anchor__links"><a href="/engagements/Eco-score" target="_blank" className="ds-link ds-link--small ">
                       <span className="ds-link__icon ds-link__icon--chevron-right"></span>
                       <span className="ds-link__label">En savoir plus</span>
                     </a>

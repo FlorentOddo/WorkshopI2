@@ -23,7 +23,8 @@ export const SearchBar = () => {
           quantity: 0, 
           price: 0
         }
-      })
+      });
+      setProducts(data);
     })
   }, []);
 
@@ -38,6 +39,14 @@ export const SearchBar = () => {
       navigate('product/' + selectedProd.idproduct, {state: selectedProd})
     }
   },[selectedProd, navigate]);
+
+  const handleCart = useCallback(
+    () => {
+      navigate('cart')
+    },
+    [navigate],
+  )
+  
   
   return (
     <>
@@ -53,6 +62,7 @@ export const SearchBar = () => {
               </datalist>
             </div>
           </form>
+          <div><button onClick={handleCart}>Panier</button></div>
         </div>
       </div>
     </>

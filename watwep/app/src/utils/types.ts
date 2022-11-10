@@ -4,5 +4,6 @@ type Product = {
   description: string,
   price: number,
   quantity: number,
-  url: string
+  url: string,
+  ecoscore: string
 }
