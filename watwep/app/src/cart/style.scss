@@ -34,6 +34,11 @@ $font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
     zoom: 1;
 }
 
+h1 {
+  text-align: center
+  
+}
+
 
 /* Apply clearfix in a few places */
 .shopping-cart, .column-labels, .product, .totals-item {
@@ -43,7 +48,7 @@ $font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
 
 /* Apply dollar signs */
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
-  content: '$';
+  content: '';
 }
 
 
