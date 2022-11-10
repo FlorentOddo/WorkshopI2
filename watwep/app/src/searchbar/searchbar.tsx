@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { setAllProducts } from '../api/api';
 import './searchbar.css'
 
 
@@ -17,14 +18,16 @@ export const SearchBar = () => {
       }, 
       body: JSON.stringify({name:""})
     }).then(res => res.json()).then(data => {
-      data.map((product: any) => {
+      const refactoredData = data.map((product: any) => {
         return {
-          ...product, 
+          ...product,
+          ecoscore: +product.ecoscore,
           quantity: 0, 
           price: 0
         }
       });
-      setProducts(data);
+      setAllProducts(refactoredData);
+      setProducts(refactoredData);
     })
   }, []);
 
@@ -42,7 +45,7 @@ export const SearchBar = () => {
 
   const handleCart = useCallback(
     () => {
-      navigate('cart')
+      navigate('cart');
     },
     [navigate],
   )
@@ -62,7 +65,9 @@ export const SearchBar = () => {
               </datalist>
             </div>
           </form>
-          <div><button onClick={handleCart}>Panier</button></div>
+          <div>
+            <button onClick={handleCart}>Panier</button>
+          </div>
         </div>
       </div>
     </>

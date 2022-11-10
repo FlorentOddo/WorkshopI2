@@ -1,7 +1,16 @@
 let basket: Product[] = [];
+let allProducts: Product[] = [];
 
 export function getBasket() {
   return basket;
+}
+
+export function getAllProducts(){
+  return allProducts;
+}
+
+export function setAllProducts(products: Product[]){
+  allProducts = products;
 }
 
 export function addToBasket(product: Product){
