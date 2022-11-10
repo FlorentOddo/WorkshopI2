@@ -1,8 +1,3 @@
-type Product = {
-  name: string,
-  price: number
-}
-
 let basket: Product[] = [];
 
 export function getBasket() {
@@ -10,7 +5,22 @@ export function getBasket() {
 }
 
 export function addToBasket(product: Product){
+  product.quantity++;
   basket.push(product);
+  return basket;
+}
+
+export function incrementProduct(product: Product){
+  product.quantity++;
+  const i = basket.findIndex(prod => prod.name === product.name);
+  basket[i].quantity++;
+  return basket;
+}
+
+export function decrementProduct(product: Product){
+  product.quantity--;
+  const i = basket.findIndex(prod => prod.name === product.name);
+  basket[i].quantity--;
   return basket;
 }
 

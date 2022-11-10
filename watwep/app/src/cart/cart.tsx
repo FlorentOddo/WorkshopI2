@@ -2,9 +2,6 @@ import React, { useCallback } from 'react';
 import { addToBasket } from '../api/api';
 import './style.scss'
 
-type ProductProps = {
-  name: string
-}
 
 export const Cart = () => {
   const handleAddToCart = useCallback(() => {
@@ -28,7 +25,7 @@ export const Cart = () => {
 
   <div className="product">
     <div className="product-image">
-      <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg"/>
+      <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg" alt="" />
     </div>
     <div className="product-details">
       <div className="product-title">Barre bounty</div>
@@ -48,7 +45,7 @@ export const Cart = () => {
 
   <div className="product">
     <div className="product-image">
-      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png"/>
+      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png" alt="" />
     </div>
     <div className="product-details">
       <div className="product-title">Pot nutella</div>
