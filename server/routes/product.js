@@ -37,14 +37,7 @@ router.post(`/name`, function(req, res, next) {
       .on("data", function (row) {
         const headers = Object.keys(row);
         if(Number(row[headers[0]]) == element.code_agb){
-          element.agri = {
-                          "groupe":row[headers[2]],
-                          "sous-groupe":row[headers[3]],
-                          "nom":row[headers[4]],
-                          "saisonnalite":row[headers[6]],
-                          "transport_avion":row[headers[7]],
-                        };
-
+          element.ecoscore = row[headers[11]];
         }
       }).on("end", function(){
         if (idx === array.length - 1){ 
