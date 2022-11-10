@@ -2,11 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './searchbar.css'
 
-type Product = {
-  idproduct: string,
-  name: string,
-  description: string
-}
+
 export const SearchBar = () => {
   const navigate = useNavigate();
 
@@ -20,7 +16,15 @@ export const SearchBar = () => {
         "Content-type": "application/json"
       }, 
       body: JSON.stringify({name:""})
-    }).then(res => res.json()).then(data => setProducts(data))
+    }).then(res => res.json()).then(data => {
+      data.map((product: any) => {
+        return {
+          ...product, 
+          quantity: 0, 
+          price: 0
+        }
+      })
+    })
   }, []);
 
   const handleSelect = useCallback((e:any) => {
