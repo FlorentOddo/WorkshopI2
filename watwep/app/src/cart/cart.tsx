@@ -13,17 +13,14 @@ export const Cart = () => {
   return (
 
     <>
-<h1>Shopping Cart</h1>
+<h1 className='m-4'>Panier recapitulatif</h1>
 
 <div className="shopping-cart">
 
   <div className="column-labels">
     <label className="product-image">Image</label>
     <label className="product-details">Product</label>
-    <label className="product-price">Price</label>
-    <label className="product-quantity">Quantity</label>
     <label className="product-removal">Remove</label>
-    <label className="product-line-price">Total</label>
   </div>
 
   <div className="product">
@@ -31,19 +28,19 @@ export const Cart = () => {
       <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg" alt="" />
     </div>
     <div className="product-details">
-      <div className="product-title">Dingo Dog Bones</div>
-      <p className="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+      <div className="product-title">Barre bounty</div>
+      <p className="product-description">Bounty®, c'est un subtil mélange de noix de coco et de délicieux chocolat au lait pour une texture à la fois moelleuse et croustillante.</p>
     </div>
-    <div className="product-price">12.99</div>
-    <div className="product-quantity">
-      <input type="number" value="2" min="1"/>
+    <div className="product-details">
+      <div className="product-title">Impact energetique et ecologique</div>
+      <p className="product-description">Vous êtes nombreux à apprécier le goût unique du Nutella sur une tranche de pain mais il existe aussi beaucoup d’autres recettes originales à essayer ! Pourquoi ne pas laisser place à votre créativité et tenter l’expérience avec Nutella ? Essayez quelque chose de nouveau pour réveiller votre enthousiasme !</p>
     </div>
+
     <div className="product-removal">
       <button className="remove-product">
-        Remove
+        Supprimer
       </button>
     </div>
-    <div className="product-line-price">25.98</div>
   </div>
 
   <div className="product">
@@ -51,37 +48,30 @@ export const Cart = () => {
       <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png" alt="" />
     </div>
     <div className="product-details">
-      <div className="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+      <div className="product-title">Pot nutella</div>
+      <p className="product-description">Vous êtes nombreux à apprécier le goût unique du Nutella sur une tranche de pain mais il existe aussi beaucoup d’autres recettes originales à essayer ! Pourquoi ne pas laisser place à votre créativité et tenter l’expérience avec Nutella ? Essayez quelque chose de nouveau pour réveiller votre enthousiasme !</p>
+    </div>    
+    <div className="product-details">
+      <div className="product-title">Impact energetique et ecologique</div>
       <p className="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
     </div>
-    <div className="product-price">45.99</div>
-    <div className="product-quantity">
-      <input type="number" value="1" min="1"/>
-    </div>
+
     <div className="product-removal">
       <button className="remove-product">
-        Remove
+      Supprimer
       </button>
     </div>
-    <div className="product-line-price">45.99</div>
   </div>
 
   <div className="totals">
     <div className="totals-item">
-      <label>Subtotal</label>
-      <div className="totals-value" id="cart-subtotal">71.97</div>
+      <label>Total des emissions CO2 eq/kg</label>
+      <div className="totals-value" id="cart-tax">19.64 $</div>
+
     </div>
     <div className="totals-item">
-      <label>Tax (5%)</label>
-      <div className="totals-value" id="cart-tax">3.60</div>
-    </div>
-    <div className="totals-item">
-      <label>Shipping</label>
-      <div className="totals-value" id="cart-shipping">15.00</div>
-    </div>
-    <div className="totals-item totals-item-total">
-      <label>Grand Total</label>
-      <div className="totals-value" id="cart-total">90.57</div>
+      <label>Equivalent en km avec un vehicule diesel</label>
+      <div className="totals-value" id="cart-tax">21 km </div>
     </div>
   </div>
       
