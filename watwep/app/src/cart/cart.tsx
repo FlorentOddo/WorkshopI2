@@ -25,7 +25,7 @@ export const Cart = () => {
 
   <div className="product">
     <div className="product-image">
-      <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg" alt="" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvxXJAXLEJvMjpd1G8j57z-dZDeMJ20ax8rQ&usqp=CAU" alt="" />
     </div>
     <div className="product-details">
       <div className="product-title">Barre bounty</div>
@@ -33,11 +33,21 @@ export const Cart = () => {
     </div>
     <div className="product-details">
       <div className="product-title">Impact energetique et ecologique</div>
-      <p className="product-description">Vous êtes nombreux à apprécier le goût unique du Nutella sur une tranche de pain mais il existe aussi beaucoup d’autres recettes originales à essayer ! Pourquoi ne pas laisser place à votre créativité et tenter l’expérience avec Nutella ? Essayez quelque chose de nouveau pour réveiller votre enthousiasme !</p>
-    </div>
+      <table>
+  
 
-    <div className="product-removal">
-      <button className="remove-product">
+<tr> <th>Libelle</th> <th>Valeur</th> <th>Unitée</th> </tr>
+
+<tr> <td>Emissions CO2   </td> <td>7,63</td> <td>eq/kg</td>  </tr>
+
+<tr> <td>Type de transport  </td> <td>Terrestre</td> <td>N/A</td> </tr>
+
+<tr> <td>Score environnemental "PEF"</td> <td>0.87</td> <td>par kg de produit</td> </tr>
+
+</table>    </div>
+
+    <div className=" " >
+      <button className="remove-product ">
         Supprimer
       </button>
     </div>
@@ -45,7 +55,7 @@ export const Cart = () => {
 
   <div className="product">
     <div className="product-image">
-      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png" alt="" />
+      <img src="https://m.media-amazon.com/images/I/71Kr1pJMalL._AC_SX522_.jpg" alt="" />
     </div>
     <div className="product-details">
       <div className="product-title">Pot nutella</div>
@@ -53,10 +63,21 @@ export const Cart = () => {
     </div>    
     <div className="product-details">
       <div className="product-title">Impact energetique et ecologique</div>
-      <p className="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+      <table>
+  
+
+<tr> <th>Libelle</th> <th>Valeur</th> <th>Unitée</th> </tr>
+
+<tr> <td>Emissions CO2   </td> <td>12,01</td> <td>eq/kg</td>  </tr>
+
+<tr> <td>Type de transport  </td> <td>Aérien</td> <td>N/A</td> </tr>
+
+<tr> <td>Score environnemental "PEF"</td> <td>1.30</td> <td>par kg de produit</td> </tr>
+
+</table>
     </div>
 
-    <div className="product-removal">
+    <div className="">
       <button className="remove-product">
       Supprimer
       </button>
@@ -66,7 +87,7 @@ export const Cart = () => {
   <div className="totals">
     <div className="totals-item">
       <label>Total des emissions CO2 eq/kg</label>
-      <div className="totals-value" id="cart-tax">19.64 $</div>
+      <div className="totals-value" id="cart-tax">19.64</div>
 
     </div>
     <div className="totals-item">
