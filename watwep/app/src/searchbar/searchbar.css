@@ -3,8 +3,10 @@
   
   /* centrer la search bar sur la page entière, ajouter un border à la class="form-group" */
   .form-group{
+    margin-top: 2em !important;
     justify-self: center;
     align-self: center;
+    margin: auto;
     border: 3px solid black;
     width: 70vw;
     border-radius: 26px;
@@ -18,24 +20,19 @@
     border : none;
   }
   
-  /* placer une icone search à droite de l'input  */
-  .searchButton{
-    float: right;
-    width: 34px;
-    height: 36px;
-    margin-top: -40px;
-    margin-right: -5px;
-    border: none;
-    background: #fff;
-  }
-  
   /* solution temporaire pour supprimer la surbrillance bleue lorsque l'input est sélectionné */
   input[type="text"]{
-  outline: none;
-  box-shadow: none !important;
-  }
-
-
+    border: none !important;
+    box-shadow: none !important;
+    transition: width 0.4s ease-in-out;
+  
+    }
+  
+    input[type=text]:focus {
+      width: 100%;
+        outline: none !important;
+  
+    }
   
   .card{
     margin:20px;
